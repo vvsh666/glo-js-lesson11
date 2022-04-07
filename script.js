@@ -17,7 +17,7 @@ const changeDim = function () {
 }
 
 const setRange = function () {
-    let startPercent = 100 * parseInt(getComputedStyle(circle).height) / parseInt(getComputedStyle(square).height);
+    let startPercent = 100 * circle.clientHeight / square.clientHeight;
     inputRange.value = startPercent;
     rangeSpan.textContent = inputRange.value + '%'
 }
@@ -29,4 +29,3 @@ eBtn.style.display = 'none';
 setRange();
 
 inputRange.addEventListener('input', changeDim)
-
